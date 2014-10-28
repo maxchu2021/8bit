@@ -1,0 +1,33 @@
+.pixel {
+	width: 23px;
+	height: 23px;
+	border: 1px dashed #ccc;
+	float: left;
+}
+
+.color {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #eee;
+	float: left;
+}
+
+aside {
+	float: left;
+	width: 300px;
+	position: fixed;
+}
+
+#editor {
+	margin-left: 300px;
+}
+
+.curColor {
+	margin-right: 15px;
+	background: #000;
+}
+
+#console {
+width: 260px;
+height: 300px;
+}

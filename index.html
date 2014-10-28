@@ -1,0 +1,58 @@
+<html>
+	<head>
+	<title>8-Bit Editor</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/8bit.js"></script>
+</head>
+<body onkeydown="showKeyCode(event);">
+
+	<div id="container">
+		
+		<header>
+			<h1>8-Bit Editor</h1>
+		</header>
+		
+		<aside>
+			<div>
+				<input type="text" id="number" size="6" value="256">
+				<input type="text" id="row" size="6" value="16">
+				<input type="text" id="color" size="6" value="#000">				
+			</div>
+			
+			<div>
+				<button class="save">Save</button>
+				<button class="load">Load</button>
+				<button class="grid">Grid</button>
+				<button class="brush">Brush</button>
+				<button class="clear">Clear</button>
+			</div>
+			
+			<textarea id="console"></textarea>
+			
+			<div>
+				<a href="#" class="example" data-name="mario">Mario</a>
+				<a href="#" class="example" data-name="mushroom">Mushroom</a>
+				<a href="#" class="example" data-name="star">Star</a>
+			</div>
+			<input type="hidden" class="mushroom-data" value='[{"i":6,"c":"#000"},{"i":7,"c":"#000"},{"i":8,"c":"#000"},{"i":9,"c":"#000"},{"i":10,"c":"#000"},{"i":11,"c":"#000"},{"i":20,"c":"#000"},{"i":21,"c":"#000"},{"i":22,"c":"#000"},{"i":23,"c":"red"},{"i":26,"c":"red"},{"i":27,"c":"#000"},{"i":28,"c":"#000"},{"i":29,"c":"#000"},{"i":35,"c":"#000"},{"i":36,"c":"#000"},{"i":37,"c":"red"},{"i":38,"c":"red"},{"i":39,"c":"red"},{"i":42,"c":"red"},{"i":43,"c":"red"},{"i":44,"c":"red"},{"i":45,"c":"#000"},{"i":46,"c":"#000"},{"i":51,"c":"#000"},{"i":53,"c":"red"},{"i":54,"c":"red"},{"i":59,"c":"red"},{"i":60,"c":"red"},{"i":62,"c":"#000"},{"i":66,"c":"#000"},{"i":67,"c":"#000"},{"i":78,"c":"#000"},{"i":79,"c":"#000"},{"i":81,"c":"#000"},{"i":82,"c":"#000"},{"i":83,"c":"red"},{"i":84,"c":"red"},{"i":87,"c":"red"},{"i":88,"c":"red"},{"i":89,"c":"red"},{"i":90,"c":"red"},{"i":93,"c":"red"},{"i":94,"c":"red"},{"i":95,"c":"#000"},{"i":96,"c":"#000"},{"i":97,"c":"#000"},{"i":98,"c":"red"},{"i":99,"c":"red"},{"i":100,"c":"red"},{"i":102,"c":"red"},{"i":103,"c":"red"},{"i":104,"c":"red"},{"i":105,"c":"red"},{"i":106,"c":"red"},{"i":107,"c":"red"},{"i":109,"c":"red"},{"i":110,"c":"red"},{"i":111,"c":"red"},{"i":112,"c":"#000"},{"i":113,"c":"#000"},{"i":114,"c":"red"},{"i":115,"c":"red"},{"i":116,"c":"red"},{"i":118,"c":"red"},{"i":119,"c":"red"},{"i":120,"c":"red"},{"i":121,"c":"red"},{"i":122,"c":"red"},{"i":123,"c":"red"},{"i":125,"c":"red"},{"i":126,"c":"red"},{"i":127,"c":"red"},{"i":128,"c":"#000"},{"i":129,"c":"#000"},{"i":130,"c":"red"},{"i":131,"c":"red"},{"i":134,"c":"red"},{"i":135,"c":"red"},{"i":136,"c":"red"},{"i":137,"c":"red"},{"i":138,"c":"red"},{"i":139,"c":"red"},{"i":142,"c":"red"},{"i":143,"c":"red"},{"i":144,"c":"#000"},{"i":145,"c":"#000"},{"i":151,"c":"red"},{"i":152,"c":"red"},{"i":153,"c":"red"},{"i":154,"c":"red"},{"i":160,"c":"#000"},{"i":161,"c":"#000"},{"i":164,"c":"#000"},{"i":165,"c":"#000"},{"i":166,"c":"#000"},{"i":167,"c":"#000"},{"i":168,"c":"#000"},{"i":169,"c":"#000"},{"i":170,"c":"#000"},{"i":171,"c":"#000"},{"i":172,"c":"#000"},{"i":173,"c":"#000"},{"i":176,"c":"#000"},{"i":177,"c":"#000"},{"i":178,"c":"#000"},{"i":179,"c":"#000"},{"i":180,"c":"#000"},{"i":183,"c":"#000"},{"i":186,"c":"#000"},{"i":189,"c":"#000"},{"i":190,"c":"#000"},{"i":191,"c":"#000"},{"i":192,"c":"#000"},{"i":194,"c":"#000"},{"i":195,"c":"#000"},{"i":199,"c":"#000"},{"i":202,"c":"#000"},{"i":206,"c":"#000"},{"i":207,"c":"#000"},{"i":211,"c":"#000"},{"i":222,"c":"#000"},{"i":227,"c":"#000"},{"i":228,"c":"#000"},{"i":237,"c":"#000"},{"i":238,"c":"#000"},{"i":244,"c":"#000"},{"i":245,"c":"#000"},{"i":246,"c":"#000"},{"i":247,"c":"#000"},{"i":248,"c":"#000"},{"i":249,"c":"#000"},{"i":250,"c":"#000"},{"i":251,"c":"#000"},{"i":252,"c":"#000"},{"i":253,"c":"#000"}]'>
+		</aside>
+
+		<div id="editor">
+			<div>
+				<div class="color curColor"></div>
+				<div class="color" data-hex="#fff" style="background:#fff"></div>
+				<div class="color" data-hex="#ccc" style="background:#ccc"></div>
+				<div class="color" data-hex="red" style="background:red"></div>
+				<div class="color" data-hex="#000" style="background:#000"></div>
+			</div>
+			
+			<br clear="both"><br>
+			
+			<div id="pixel"></div>
+		</div>
+		
+	</div><!-- end container -->
+		
+</body>
+</html>
